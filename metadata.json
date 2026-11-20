@@ -1,0 +1,8 @@
+{
+  "name": "Remix RelaySMS",
+  "description": "Bulk SMS dispatch software with contact group management, live delivery status reports, and cross-platform Windows (.exe), Android (.apk), and PWA deployment kits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

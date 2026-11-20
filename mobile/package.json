@@ -1,0 +1,17 @@
+{
+  "name": "relaysms-android",
+  "version": "1.0.0",
+  "description": "RelaySMS Android Mobile Companion & Native SIM Bridge",
+  "scripts": {
+    "sync": "npx cap sync android",
+    "apk:debug": "cd android && ./gradlew assembleDebug",
+    "apk:release": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0"
+  }
+}

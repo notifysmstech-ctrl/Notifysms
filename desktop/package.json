@@ -1,0 +1,41 @@
+{
+  "name": "relaysms-desktop",
+  "version": "1.0.0",
+  "description": "RelaySMS Bulk Messaging Desktop Application for Windows",
+  "main": "electron-main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis portable",
+    "dist:win-x64": "electron-builder --win nsis --x64"
+  },
+  "build": {
+    "appId": "com.relaysms.desktop",
+    "productName": "RelaySMS",
+    "directories": {
+      "output": "dist-exe"
+    },
+    "files": [
+      "electron-main.cjs",
+      "preload.cjs",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "artifactName": "RelaySMS-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^35.1.0",
+    "electron-builder": "^26.0.12"
+  }
+}
